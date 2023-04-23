@@ -1,9 +1,7 @@
+import StartingPageContent from "@/components/starting-page/starting-page";
+
 function HomePage() {
-  return (
-    <section>
-      <h1>Welcome on Board!</h1>
-    </section>
-  );
+  return <StartingPageContent />;
 }
 
 export default HomePage;
