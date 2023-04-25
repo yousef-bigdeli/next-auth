@@ -4,8 +4,10 @@ import classes from "./main-navigation.module.css";
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <Link href="/">
-        <div className={classes.logo}>Next Auth</div>
+      <Link href="/" legacyBehavior>
+        <a>
+          <div className={classes.logo}>Next Auth</div>
+        </a>
       </Link>
       <nav>
         <ul>
