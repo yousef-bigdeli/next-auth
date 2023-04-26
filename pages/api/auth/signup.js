@@ -39,7 +39,7 @@ async function handler(req, res) {
   // Check if the user exists
   try {
     const existingUser = await getDocument(client, "users", { email });
-    if (existingUser) {
+    if (existingUser.length !== 0) {
       res.status(422).json({ message: "User already exist!" });
       client.close();
       return;
