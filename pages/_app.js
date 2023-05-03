@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <SessionProvider session={pageProps.session}>
+    <SessionProvider session={pageProps.session} basePath='/api/auth'>
       <Layout>
         <Component {...pageProps} />
       </Layout>
