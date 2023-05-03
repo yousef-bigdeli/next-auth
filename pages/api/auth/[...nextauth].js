@@ -4,10 +4,8 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { connectDatabase, getDocument } from "@/lib/db";
 import { verifyPassword } from "@/lib/auth";
 
-export default NextAuth({
-  session: {
-    jwt: true,
-  },
+export const authOptions = {
+  session: { strategy: "jwt" },
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -51,4 +49,6 @@ export default NextAuth({
       },
     }),
   ],
-});
+};
+
+export default NextAuth(authOptions);
